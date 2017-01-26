@@ -14,4 +14,5 @@ RUN mkdir -p /opt/cni/bin /etc/cni/net.d && \
     tar xvzf - -C /opt/cni/bin
 
 COPY start.sh start-vxlan.sh rancher-net /usr/bin/
+COPY bob-host-local /opt/cni/bin/host-local
 CMD ["start.sh"]
